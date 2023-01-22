@@ -29,6 +29,7 @@ namespace WebAPIStartupKit
             container.RegisterType<IImageConfigService, ImageConfigService>();
             container.RegisterType<IPageContentService, PageContentService>();
             container.RegisterType<IMemberService, MemberService>();
+            container.RegisterType<ITransactionService, TransactionService>();
 
             //  container.RegisterType<ISalaryItemService, SalaryItemService>();
             container.RegisterType<IProductRepository, ProductRepository>();
@@ -39,6 +40,7 @@ namespace WebAPIStartupKit
             container.RegisterType<IPageContentRepository, PageContentRepository>();
             container.RegisterType<IImageConfigRepository, ImageConfigRepository>();
             container.RegisterType<IMemberRepository, MemberRepository>();
+            container.RegisterType<ITransactionRepository, TransactionRepository>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

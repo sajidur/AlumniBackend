@@ -61,6 +61,22 @@
     <Compile Include="Migrations\202301100618143_initial.designer.cs">
       <DependentUpon>202301100618143_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301141222370_transaction.cs" />
+    <Compile Include="Migrations\202301141222370_transaction.designer.cs">
+      <DependentUpon>202301141222370_transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301171338220_rename.cs" />
+    <Compile Include="Migrations\202301171338220_rename.designer.cs">
+      <DependentUpon>202301171338220_rename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301171349354_transaction column added.cs" />
+    <Compile Include="Migrations\202301171349354_transaction column added.designer.cs">
+      <DependentUpon>202301171349354_transaction column added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301221420474_memberid change.cs" />
+    <Compile Include="Migrations\202301221420474_memberid change.designer.cs">
+      <DependentUpon>202301221420474_memberid change.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NewsContent.cs" />
     <Compile Include="PageContent.cs" />
@@ -77,8 +93,10 @@
     <Compile Include="Repository\IContactRepository.cs" />
     <Compile Include="Repository\NewsContentRepository.cs" />
     <Compile Include="Repository\ContactRepository.cs" />
+    <Compile Include="Repository\TransactionRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="SliderImage.cs" />
+    <Compile Include="Transaction.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,6 +107,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202301100618143_initial.resx">
       <DependentUpon>202301100618143_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301141222370_transaction.resx">
+      <DependentUpon>202301141222370_transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301171338220_rename.resx">
+      <DependentUpon>202301171338220_rename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301171349354_transaction column added.resx">
+      <DependentUpon>202301171349354_transaction column added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301221420474_memberid change.resx">
+      <DependentUpon>202301221420474_memberid change.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

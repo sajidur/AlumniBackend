@@ -21,11 +21,14 @@ namespace StartKitBLL
         private IMemberRepository _memberRepository;
         private IUserRepository _userRepository;
         private IMapper _mapper;
-        public MemberService(IMemberRepository memberRepository, IUserRepository userRepository, IMapper mapper)
+        private IEmailer _emailer;
+
+        public MemberService(IMemberRepository memberRepository, IUserRepository userRepository, IMapper mapper, IEmailer emailer)
         {
             this._memberRepository = memberRepository;
             _userRepository= userRepository;
             this._mapper = mapper;
+            this._emailer = emailer;
         }
 
         int IMemberService.Delete(int id)
@@ -56,8 +59,21 @@ namespace StartKitBLL
                     User user = new User();
                     user.UserName = member.Mobile.ToString();
                     user.Password = member.Mobile.ToString();
-                    user.CompanyId = id;
+                    user.MemberId = id;
                     _userRepository.Save(user);
+                    try
+                    {
+                        var emal = new Contact();
+                        emal.Name = user.UserName;
+                        emal.Email = member.Email;
+                        emal.Message = "Dear Participant, <br/>\n Your Membership registration sucessfully done. your username:"+member.Mobile+" & password: "+member.Mobile+" Please wait we will confirm you soon.<br/><br/> Thanks Organizer team";
+                        emal.Subject = "Your Membership registration sucessfully";
+                        _emailer.SendEmail(emal);
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
                 }
             }
             catch (Exception ex)

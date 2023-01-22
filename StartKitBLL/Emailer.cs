@@ -20,12 +20,13 @@ namespace StartKitBLL
             // current working directory.
             // Create a message and set up the recipients.
             MailMessage message = new MailMessage(
-                "web@dhakahandicrafts.com",
+                "info@cupaesfd.org",
                // "suahmed@dhakahandicrafts.com,website@dhakahandicrafts.com,sajid.ict@hotmail.com",
-               "website@dhakahandicrafts.com,sajid.ict@hotmail.com",
+               email.Email,
                 email.Subject,
-                "My email address is:"+  email.Email+" Message:" + email.Message);
+                email.Message);
             message.ReplyToList.Add(new MailAddress(email.Email));
+            message.IsBodyHtml=true;
             // Create  the file attachment for this email message.
             //  Attachment data = new Attachment(file, MediaTypeNames.Application.Octet);
             // Add time stamp information for the file.
@@ -38,9 +39,9 @@ namespace StartKitBLL
 
             //Send the message.
             //  SmtpClient client = new SmtpClient("mail.rexsystemsbd.com", 8889);
-            SmtpClient client = new SmtpClient("mail.dhakahandicrafts.com", 587);
+            SmtpClient client = new SmtpClient("mail.cupaesfd.org", 587);
             client.UseDefaultCredentials = false;
-            NetworkCredential MyCredentials = new NetworkCredential("web@dhakahandicrafts.com", "Root@pass1");
+            NetworkCredential MyCredentials = new NetworkCredential("info@cupaesfd.org", "Info@12345678");
             // Add credentials if the SMTP server requires them.
             client.Credentials = MyCredentials;
             try

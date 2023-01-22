@@ -29,6 +29,8 @@ namespace StarterKITDAL
         public DbSet<ImageConfiguration> ImageConfigurations { get; set; }
         public DbSet<PageContent> PageContents { get; set; }
         public DbSet<Member> Members { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+
 
     }
     public class SeedInitialize : CreateDatabaseIfNotExists<ApplicationDbContext>
