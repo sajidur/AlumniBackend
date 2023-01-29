@@ -77,6 +77,10 @@
     <Compile Include="Migrations\202301221420474_memberid change.designer.cs">
       <DependentUpon>202301221420474_memberid change.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301280523095_db changes.cs" />
+    <Compile Include="Migrations\202301280523095_db changes.designer.cs">
+      <DependentUpon>202301280523095_db changes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NewsContent.cs" />
     <Compile Include="PageContent.cs" />
@@ -119,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301221420474_memberid change.resx">
       <DependentUpon>202301221420474_memberid change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301280523095_db changes.resx">
+      <DependentUpon>202301280523095_db changes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

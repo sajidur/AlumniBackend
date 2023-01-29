@@ -9,6 +9,7 @@ namespace StarterKITDAL
     public class Member: BaseEntity
     {
         public string Name { get; set; }
+        public string MemberNo { get; set; }
         public string UniversityBatch { get; set; }
         public string MSSYear { get; set; }
         public string Email { get; set; }

@@ -14,6 +14,7 @@ namespace StarterKITDAL
         }
         public int EventId { get; set; }
         public string EventName { get; set; }
+        public string EventPlace { get; set; }
         public int MemberId { get; set; }
         public string Name { get; set; }
         public string Mobile { get; set; }

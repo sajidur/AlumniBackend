@@ -41,7 +41,6 @@ namespace StartKitBLL
             return _memberRepository.GetById(id);
         }
 
-
         List<Member> IMemberService.GetList()
         {
            return _memberRepository.GetList();
@@ -50,6 +49,13 @@ namespace StartKitBLL
         int IMemberService.Save(Member member)
         {
             var id= _memberRepository.Save(member);
+            if (id>0)
+            {
+                //update memberId
+                member.Id = id;
+                member.MemberNo = id.ToString().PadLeft(6, '0'); ;
+                _memberRepository.Save(member);
+            }
             try
             {
                 //check user

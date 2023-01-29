@@ -56,5 +56,15 @@ namespace WebAPIStartupKit.Controllers
             return i;
         }
 
+        [HttpPost]
+        [Route("Update")]
+        public int Update(Member member)
+        {
+            var httpRequest = HttpContext.Current.Request;
+            var i = _memberService.Save(member);
+
+            return i;
+        }
+
     }
 }

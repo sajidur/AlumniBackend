@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +35,13 @@ namespace StarterKITDAL.Repository
         public List<Transaction> GetByMobile(string mobile,int eventId)
         {
             return _context.Transactions.Where(a => a.Mobile ==mobile && a.EventId==eventId).ToList();
+        }
+
+        public DataTable GetByMobileAndTransactionNo(int memberId, string transactionNo)
+        {
+            from transaction in _context.Transactions
+            join b in _context.Members on transaction.MemberId equals b.Id where transaction.MemberId== memberId && transaction.BkashTransactionId == transactionNo
+            select new Row { transaction.nam}
         }
 
         public int Save(Transaction transaction)
