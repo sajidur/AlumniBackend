@@ -2,6 +2,7 @@
 using StarterKITDAL.Repository;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,7 +69,8 @@ namespace StartKitBLL
                     var emal = new Contact();
                     emal.Name = transaction.Name;
                     emal.Email = member.Email;
-                    emal.Message = "Dear Participant, <br/>\n Your Event registration sucessfully Verified. Thanks for joining.<br/><br/> Thanks Organizer team";
+                    emal.Message = "Dear Participant, <br/>\n Your Event registration sucessfully Verified. <br/>Please download your verified token from the below link<br/>" +
+                        "<div class=\"button\"><a href=\"https://alumnibackend.rexsystemsbd.com/api/Download/Download?memberId="+transaction.MemberId+"&transactionNo="+transaction.BkashTransactionId+"\r\n\">Please download from here</a></div> \r\n Thanks for joining.<br/><br/> Thanks Organizer team";
                     emal.Subject = "Your Event registration Approved";
                     _emailer.SendEmail(emal);
                 }
@@ -94,6 +96,11 @@ namespace StartKitBLL
             return result;
 
         }
+
+        public DataTable GetByMobileAndTransactionNo(int memberId, string transactionNo)
+        {
+           return _transactionRepository.GetByMobileAndTransactionNo(memberId, transactionNo);
+        }
     }
 
     public interface ITransactionService
@@ -103,5 +110,6 @@ namespace StartKitBLL
         List<Transaction> GetByMobile(string mobile, int eventId);
         int Save(Transaction transaction);
         int Approve(Transaction transaction);
+        DataTable GetByMobileAndTransactionNo(int memberId, string transactionNo);
     }
 }

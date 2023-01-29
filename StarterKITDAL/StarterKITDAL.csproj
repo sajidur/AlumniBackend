@@ -55,6 +55,7 @@
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Contact.cs" />
+    <Compile Include="DbContextExtensions.cs" />
     <Compile Include="ImageConfiguration.cs" />
     <Compile Include="Member.cs" />
     <Compile Include="Migrations\202301100618143_initial.cs" />
@@ -80,6 +81,10 @@
     <Compile Include="Migrations\202301280523095_db changes.cs" />
     <Compile Include="Migrations\202301280523095_db changes.designer.cs">
       <DependentUpon>202301280523095_db changes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301291627407_make mobile as string.cs" />
+    <Compile Include="Migrations\202301291627407_make mobile as string.designer.cs">
+      <DependentUpon>202301291627407_make mobile as string.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NewsContent.cs" />
@@ -126,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301280523095_db changes.resx">
       <DependentUpon>202301280523095_db changes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301291627407_make mobile as string.resx">
+      <DependentUpon>202301291627407_make mobile as string.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,7 +13,7 @@ namespace StarterKITDAL
         public string UniversityBatch { get; set; }
         public string MSSYear { get; set; }
         public string Email { get; set; }
-        public long Mobile { get; set; }
+        public string Mobile { get; set; }
         public string WhatsAppp { get; set; }
         public string FacebookId { get; set; }
         public string BloodGroup { get; set; }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.Entity;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace StarterKITDAL.Repository
         Transaction GetByTransactionId(string transactionId);
         List<Transaction> GetByMobile(string mobile, int eventId);
         int Save(Transaction transaction);
+        DataTable GetByMobileAndTransactionNo(int memberId, string transactionNo);
     }
     public class TransactionRepository : ITransactionRepository
     {
@@ -39,9 +41,12 @@ namespace StarterKITDAL.Repository
 
         public DataTable GetByMobileAndTransactionNo(int memberId, string transactionNo)
         {
-            from transaction in _context.Transactions
-            join b in _context.Members on transaction.MemberId equals b.Id where transaction.MemberId== memberId && transaction.BkashTransactionId == transactionNo
-            select new Row { transaction.nam}
+           var datatable= _context.DataTable("exec TicketPrint "+ memberId + ",'"+transactionNo+"'");
+            //from transaction in _context.Transactions
+            //join b in _context.Members on transaction.MemberId equals b.Id
+            //where transaction.MemberId == memberId && transaction.BkashTransactionId == transactionNo
+            //select  transaction ;
+            return datatable;
         }
 
         public int Save(Transaction transaction)

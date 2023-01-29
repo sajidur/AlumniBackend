@@ -59,7 +59,7 @@ namespace StartKitBLL
             try
             {
                 //check user
-                var userCheck=_userRepository.GetByUserName(member.Mobile.ToString());
+                var userCheck=_userRepository.GetByUserName(member.Mobile);
                 if (userCheck==null)
                 {
                     User user = new User();

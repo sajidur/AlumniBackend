@@ -19,8 +19,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Name</rd:DefaultName>
-        <Top>0.06944in</Top>
-        <Left>2.86333in</Left>
+        <Top>0.51944in</Top>
+        <Left>1.61333in</Left>
         <Height>0.25in</Height>
         <Width>1.58333in</Width>
         <Style>
@@ -48,8 +48,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>0.06944in</Top>
-        <Left>0.98486in</Left>
+        <Top>0.51944in</Top>
+        <Left>0.48486in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>1</ZIndex>
@@ -78,8 +78,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>0.41135in</Top>
-        <Left>0.98486in</Left>
+        <Top>0.86135in</Top>
+        <Left>0.48486in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>2</ZIndex>
@@ -110,10 +110,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>UniversityBatch</rd:DefaultName>
-        <Top>0.41135in</Top>
-        <Left>2.86333in</Left>
+        <Top>0.86135in</Top>
+        <Left>1.61333in</Left>
         <Height>0.25in</Height>
-        <Width>1.70833in</Width>
+        <Width>1.59374in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -132,7 +132,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Registration Txn No:</Value>
+                <Value>Payment Txn No:</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -140,10 +140,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>0.75325in</Top>
-        <Left>0.98486in</Left>
+        <Top>1.20325in</Top>
+        <Left>0.48486in</Left>
         <Height>0.25in</Height>
-        <Width>1.5625in</Width>
+        <Width>1.38542in</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -172,10 +172,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>BkashTransactionId</rd:DefaultName>
-        <Top>0.75325in</Top>
-        <Left>2.86333in</Left>
+        <Top>1.20325in</Top>
+        <Left>1.61333in</Left>
         <Height>0.25in</Height>
-        <Width>1.70833in</Width>
+        <Width>1.59374in</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -198,14 +198,16 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Mobile</rd:DefaultName>
-        <Top>1.09111in</Top>
-        <Left>2.86333in</Left>
+        <Top>1.54111in</Top>
+        <Left>1.61333in</Left>
         <Height>0.25in</Height>
-        <Width>1.70833in</Width>
+        <Width>1.59374in</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -232,8 +234,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.09111in</Top>
-        <Left>0.98486in</Left>
+        <Top>1.54111in</Top>
+        <Left>0.48486in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>7</ZIndex>
@@ -255,17 +257,19 @@
             <TextRuns>
               <TextRun>
                 <Value>Venue:</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.42083in</Top>
-        <Left>0.98486in</Left>
+        <Top>2.04583in</Top>
+        <Left>0.48486in</Left>
         <Height>0.25in</Height>
-        <Width>1in</Width>
+        <Width>0.625in</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -279,23 +283,28 @@
       </Textbox>
       <Textbox Name="EventPlace">
         <CanGrow>true</CanGrow>
+        <CanShrink>true</CanShrink>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!EventPlace.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>EventPlace</rd:DefaultName>
-        <Top>1.42083in</Top>
-        <Left>2.86333in</Left>
-        <Height>0.25in</Height>
-        <Width>1.70833in</Width>
+        <Top>1.98333in</Top>
+        <Left>1.29389in</Left>
+        <Height>0.3125in</Height>
+        <Width>4.66666in</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -318,12 +327,14 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.8125in</Top>
-        <Left>0.98486in</Left>
+        <Top>0.51944in</Top>
+        <Left>3.32166in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>10</ZIndex>
@@ -348,14 +359,16 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>SpouseCount</rd:DefaultName>
-        <Top>1.8125in</Top>
-        <Left>2.86333in</Left>
+        <Top>0.51944in</Top>
+        <Left>4.45013in</Left>
         <Height>0.25in</Height>
-        <Width>1.70833in</Width>
+        <Width>1.5in</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -378,12 +391,14 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.11806in</Top>
-        <Left>0.98486in</Left>
+        <Top>0.86135in</Top>
+        <Left>3.32166in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>12</ZIndex>
@@ -408,14 +423,16 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ChildCount</rd:DefaultName>
-        <Top>2.08625in</Top>
-        <Left>2.87375in</Left>
+        <Top>0.86135in</Top>
+        <Left>4.45013in</Left>
         <Height>0.25in</Height>
-        <Width>1.69791in</Width>
+        <Width>1.5in</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -438,12 +455,14 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.4375in</Top>
-        <Left>0.98486in</Left>
+        <Top>1.20325in</Top>
+        <Left>3.32166in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>14</ZIndex>
@@ -468,14 +487,16 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>DriverCount</rd:DefaultName>
-        <Top>2.47792in</Top>
-        <Left>2.85292in</Left>
+        <Top>1.20325in</Top>
+        <Left>4.45013in</Left>
         <Height>0.25in</Height>
-        <Width>1.70833in</Width>
+        <Width>1.5in</Width>
         <ZIndex>15</ZIndex>
         <Style>
           <Border>
@@ -498,14 +519,16 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.86458in</Top>
-        <Left>0.98486in</Left>
+        <Top>1.54111in</Top>
+        <Left>3.32166in</Left>
         <Height>0.25in</Height>
-        <Width>1.77083in</Width>
+        <Width>1.19791in</Width>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
@@ -528,13 +551,16 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
-        <Top>2.86458in</Top>
-        <Left>2.87375in</Left>
+        <rd:DefaultName>TotalCount</rd:DefaultName>
+        <Top>1.54111in</Top>
+        <Left>4.45013in</Left>
         <Height>0.25in</Height>
-        <Width>1.57291in</Width>
+        <Width>1.5in</Width>
         <ZIndex>17</ZIndex>
         <Style>
           <Border>
@@ -546,70 +572,93 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>2.4625in</Top>
+        <Height>0.25in</Height>
+        <Width>5.95013in</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>CornflowerBlue</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="EventName">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!EventName.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>EventName</rd:DefaultName>
+        <Height>0.38542in</Height>
+        <Width>5.96054in</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <TopBorder>
+            <Style>Solid</Style>
+            <Width>0.25pt</Width>
+          </TopBorder>
+          <BottomBorder>
+            <Style>Solid</Style>
+            <Width>0.25pt</Width>
+          </BottomBorder>
+          <BackgroundColor>Silver</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>3.6875in</Height>
-    <Style />
+    <Height>2.83333in</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+    </Style>
   </Body>
-  <Width>7.19667in</Width>
+  <Width>6.33333in</Width>
   <Page>
-    <PageHeader>
-      <Height>1in</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Textbox Name="EventName">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=First(Fields!EventName.Value, "DataSet1")</Value>
-                  <Style>
-                    <FontSize>16pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>EventName</rd:DefaultName>
-          <Top>0.39458in</Top>
-          <Left>0.48833in</Left>
-          <Height>0.25in</Height>
-          <Width>6.59375in</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
-      <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
-      </Style>
-    </PageHeader>
-    <PageFooter>
-      <Height>1in</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
-      </Style>
-    </PageFooter>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <PageHeight>4.5in</PageHeight>
+    <PageWidth>6in</PageWidth>
+    <InteractiveHeight>4.5in</InteractiveHeight>
+    <InteractiveWidth>6in</InteractiveWidth>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
@@ -845,10 +894,14 @@
           <DataField>EventPlace</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="TotalCount">
+          <DataField>TotalCount</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>db_a66689_alumniDataSet_sp</rd:DataSetName>
-        <rd:SchemaPath>C:\My data\AlumniBackend\WebAPIStartupKit\db_a66689_alumniDataSet_sp.xsd</rd:SchemaPath>
+        <rd:DataSetName>db_a66689_alumniDataSetTicket</rd:DataSetName>
+        <rd:SchemaPath>C:\My data\AlumniBackend\WebAPIStartupKit\db_a66689_alumniDataSetTicket.xsd</rd:SchemaPath>
         <rd:TableName>TicketPrint</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

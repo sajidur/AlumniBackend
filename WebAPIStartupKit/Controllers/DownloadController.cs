@@ -16,29 +16,25 @@ namespace WebAPIStartupKit.Controllers
     [RoutePrefix("api/Download")]
     public class DownloadController : ApiController
     {
-        private readonly ICategoryService _categoryService;
-        public DownloadController(ICategoryService sliderImage)
+        private readonly ITransactionService _transactionService;
+        public DownloadController(ITransactionService transactionService)
         {
-            _categoryService = sliderImage;
+            _transactionService = transactionService;
         }
         [HttpGet]
         [Route("Download")]
-        public HttpResponseMessage Download(string transactionNo)
+        public HttpResponseMessage Download(int memberId,string transactionNo)
         {
             string mimtype = "";
             int extension = 1;
-            var _reportPath = HttpContext.Current.Server.MapPath("~/Report/Report1.rdlc");
+            var _reportPath = HttpContext.Current.Server.MapPath("~/Report/Report2.rdlc");
 
             LocalReport localReport = new LocalReport(_reportPath);
 
 
             //Dados
-            System.Data.DataTable dt = new System.Data.DataTable();
-            dt.Clear();
-            dt.Columns.Add("Id", typeof(int));
-            dt.Columns.Add("Name", typeof(string));
-            dt.Rows.Add(1, "Paulo");
-            dt.Rows.Add(2, "Jose");
+            var dt = _transactionService.GetByMobileAndTransactionNo(memberId, transactionNo);
+          
             localReport.AddDataSource("DataSet1", dt);
 
 
