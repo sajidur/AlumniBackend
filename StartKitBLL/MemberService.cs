@@ -72,7 +72,7 @@ namespace StartKitBLL
                         var emal = new Contact();
                         emal.Name = user.UserName;
                         emal.Email = member.Email;
-                        emal.Message = "Dear Participant, <br/>\n Your Membership registration sucessfully done. your username:"+member.Mobile+" & password: "+member.Mobile+" Please wait we will confirm you soon.<br/><br/> Thanks Organizer team";
+                        emal.Message = "Dear Participant, <br/>\n Your Membership registration sucessfully done. your username:"+member.Mobile+" & password: "+member.Mobile+".<br/><br/> Thanks Organizer team";
                         emal.Subject = "Your Membership registration sucessfully";
                         _emailer.SendEmail(emal);
                     }

@@ -27,7 +27,7 @@ namespace WebAPIStartupKit.Controllers
         {
             string mimtype = "";
             int extension = 1;
-            var _reportPath = HttpContext.Current.Server.MapPath("~/Report/Report2.rdlc");
+            var _reportPath = HttpContext.Current.Server.MapPath("~/Report/Event_Card.rdlc");
 
             LocalReport localReport = new LocalReport(_reportPath);
 
@@ -62,7 +62,7 @@ namespace WebAPIStartupKit.Controllers
             HttpResponseMessage httpResponseMessage = Request.CreateResponse(HttpStatusCode.OK);
             httpResponseMessage.Content = new StreamContent(stream);
             httpResponseMessage.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment");
-            httpResponseMessage.Content.Headers.ContentDisposition.FileName = transactionNo+".pdf";
+            httpResponseMessage.Content.Headers.ContentDisposition.FileName = "Event_card"+memberId+".pdf";
             httpResponseMessage.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
 
             return httpResponseMessage;

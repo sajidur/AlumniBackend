@@ -14,11 +14,13 @@ namespace StartKitBLL
         private ITransactionRepository _transactionRepository;
         private IMemberRepository _memberRepository;
         private IEmailer _emailer;
-        public TransactionService(ITransactionRepository transactionRepository, IEmailer emailer, IMemberRepository memberRepository)
+        private ISMSSender _sender;
+        public TransactionService(ITransactionRepository transactionRepository, IEmailer emailer, ISMSSender sender, IMemberRepository memberRepository)
         {
             this._transactionRepository = transactionRepository;
             _memberRepository = memberRepository;
             _emailer = emailer;
+            _sender = sender;
         }
         public ICollection<Transaction> GetAll(int eventId)
         {
@@ -64,6 +66,14 @@ namespace StartKitBLL
             var member=_memberRepository.GetById(transaction.MemberId);
             if (result != -1)
             {
+                try
+                {
+                   var isSend= _sender.Send(member.Mobile, "Your Event registration has been sucessfully approved. Please check your mail.", "");
+                }
+                catch (Exception ex)
+                {
+
+                }
                 try
                 {
                     var emal = new Contact();

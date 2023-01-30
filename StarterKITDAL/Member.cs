@@ -11,6 +11,9 @@ namespace StarterKITDAL
         public string Name { get; set; }
         public string MemberNo { get; set; }
         public string UniversityBatch { get; set; }
+        public string FatherName { get; set; }
+        public string Mothername { get; set; }
+        public string BSSYear { get; set; }
         public string MSSYear { get; set; }
         public string Email { get; set; }
         public string Mobile { get; set; }

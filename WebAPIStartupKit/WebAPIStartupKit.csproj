@@ -443,7 +443,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Report\Report2.rdlc" />
+    <EmbeddedResource Include="Report\Event_Card.rdlc" />
     <EmbeddedResource Include="Report\Report1.rdlc" />
   </ItemGroup>
   <PropertyGroup>

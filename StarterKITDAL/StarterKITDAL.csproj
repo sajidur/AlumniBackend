@@ -86,6 +86,10 @@
     <Compile Include="Migrations\202301291627407_make mobile as string.designer.cs">
       <DependentUpon>202301291627407_make mobile as string.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301301313116_member changes.cs" />
+    <Compile Include="Migrations\202301301313116_member changes.designer.cs">
+      <DependentUpon>202301301313116_member changes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NewsContent.cs" />
     <Compile Include="PageContent.cs" />
@@ -134,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301291627407_make mobile as string.resx">
       <DependentUpon>202301291627407_make mobile as string.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301301313116_member changes.resx">
+      <DependentUpon>202301301313116_member changes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

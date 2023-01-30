@@ -20,6 +20,8 @@ namespace WebAPIStartupKit
             // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<IProductService, ProductService>();
             container.RegisterType<IEmailer,Emailer>();
+            container.RegisterType<ISMSSender, SMSSender>();
+
             container.RegisterType<IContactRepository, ContactRepository>();
             container.RegisterType<INewsContentRepository, NewsContentRepository>();
             container.RegisterType<INewsContentService, NewsContentService>();
