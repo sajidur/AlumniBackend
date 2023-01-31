@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.WebRequestMethods;
 
 namespace StartKitBLL
 {
@@ -45,6 +46,15 @@ namespace StartKitBLL
             {
                 try
                 {
+                    var isSend = _sender.Send(transaction.Mobile, "Your Event registration is pending for approval.  - cupaesfd.org", "");
+                }
+                catch (Exception ex)
+                {
+
+                }
+
+                try
+                {
                     var emal = new Contact();
                     emal.Name = transaction.Name;
                     emal.Message = "Dear Participant, <br/>\n Your Event registration sucessfully done. Please wait we will confirm you soon.<br/> Thanks Organizer team";
@@ -59,6 +69,17 @@ namespace StartKitBLL
             return result;
 
         }
+        public string Base64Encode(string plainText)
+        {
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+            return System.Convert.ToBase64String(plainTextBytes);
+        }
+        public string Base64Decode(string base64EncodedData)
+        {
+            var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
+            return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
+        }
+
         public int Approve(Transaction transaction)
         {
             transaction.IsApproved = true;
@@ -68,7 +89,7 @@ namespace StartKitBLL
             {
                 try
                 {
-                   var isSend= _sender.Send(member.Mobile, "Your Event registration has been sucessfully approved. Please check your mail.", "");
+                   var isSend= _sender.Send(member.Mobile, "Your Event registration approved. Please click https://alumnibackend.rexsystemsbd.com/api/Download/Download?memberId="+transaction.MemberId+"&transactionNo="+transaction.BkashTransactionId+".", "");
                 }
                 catch (Exception ex)
                 {

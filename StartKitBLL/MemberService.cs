@@ -22,13 +22,15 @@ namespace StartKitBLL
         private IUserRepository _userRepository;
         private IMapper _mapper;
         private IEmailer _emailer;
+        private ISMSSender _sender;
 
-        public MemberService(IMemberRepository memberRepository, IUserRepository userRepository, IMapper mapper, IEmailer emailer)
+        public MemberService(IMemberRepository memberRepository, ISMSSender sender, IUserRepository userRepository, IMapper mapper, IEmailer emailer)
         {
             this._memberRepository = memberRepository;
             _userRepository= userRepository;
             this._mapper = mapper;
             this._emailer = emailer;
+            _sender = sender;
         }
 
         int IMemberService.Delete(int id)
@@ -67,6 +69,16 @@ namespace StartKitBLL
                     user.Password = member.Mobile.ToString();
                     user.MemberId = id;
                     _userRepository.Save(user);
+
+                    try
+                    {
+                        var isSend = _sender.Send(member.Mobile, "Your registration sucessfully done. your username:"+member.Mobile+" & password: "+member.Mobile+". Please login for event", "");
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
                     try
                     {
                         var emal = new Contact();
