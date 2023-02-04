@@ -72,7 +72,7 @@ namespace StartKitBLL
 
                     try
                     {
-                        var isSend = _sender.Send(member.Mobile, "Your registration sucessfully done. your username:"+member.Mobile+" & password: "+member.Mobile+". Please login for event", "");
+                        var isSend = _sender.Send(member.Mobile, "Your registration sucessfully done. your username:"+member.Mobile+" ; password: "+member.Mobile+". Please login for event", "");
                     }
                     catch (Exception ex)
                     {

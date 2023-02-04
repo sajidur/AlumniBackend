@@ -80,6 +80,52 @@ namespace StartKitBLL
             return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
         }
 
+        public int DeApprove(Transaction transaction)
+        {
+            transaction.IsApproved = false;
+            var result = _transactionRepository.Save(transaction);
+            var member = _memberRepository.GetById(transaction.MemberId);
+            if (result != -1)
+            {
+                try
+                {
+                    var isSend = _sender.Send(member.Mobile, "Your Event registration De-approved. Please do it again","");
+                }
+                catch (Exception ex)
+                {
+
+                }
+                try
+                {
+                    var emal = new Contact();
+                    emal.Name = transaction.Name;
+                    emal.Email = member.Email;
+                    emal.Message = "Dear Participant, <br/>\n Your Event registration de-approved <br/>Please do it again<br/> \r\n Thanks for joining.<br/><br/> Thanks Organizer team";
+                    emal.Subject = "Your Event registration DeApproved";
+                    _emailer.SendEmail(emal);
+                }
+                catch (Exception ex)
+                {
+
+                }
+                // admin
+                try
+                {
+                    var emal = new Contact();
+                    emal.Name = transaction.Name;
+                    emal.Email = "nafsobhan@gmail.com";
+                    emal.Message = "Dear Admin, <br/>\n A Event registration transaction has been de-activated Member:" + member.Name + " <br/> Mobile: " + member.Mobile + ".<br/><br/> Thanks Organizer team";
+                    emal.Subject = "Your Event registration DeApproved";
+                    _emailer.SendEmail(emal);
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+            return result;
+
+        }
         public int Approve(Transaction transaction)
         {
             transaction.IsApproved = true;

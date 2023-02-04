@@ -10,6 +10,7 @@ namespace StarterKITDAL
     {
         public string Name { get; set; }
         public string MemberNo { get; set; }
+        public DateTime? DOB { get; set; }
         public string UniversityBatch { get; set; }
         public string FatherName { get; set; }
         public string Mothername { get; set; }

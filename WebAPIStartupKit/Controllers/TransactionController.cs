@@ -48,6 +48,18 @@ namespace WebAPIStartupKit.Controllers
         }
 
         [HttpPost]
+        [Route("DeApprove")]
+        public int DeApprove(string transactionId)
+        {
+            var i = _transactionService.GetByTransactionId(transactionId);
+            if (i == null)
+            {
+                throw new System.Exception("Transaction not found!!");
+            }
+            return _transactionService.Approve(i);
+        }
+
+        [HttpPost]
         [Route("Approve")]
         public int Approve(string transactionId)
         {
